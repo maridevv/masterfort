@@ -1,0 +1,136 @@
+.blog-single-post-listing.details,
+.nice-select ul.list {
+  border-radius: 0;
+}
+
+.blog-single-post-listing.details .thumbnail {
+  position: relative;
+  border-radius: 15px 15px 15px 0;
+  box-shadow: 0 30px 504px #70e01f1a;
+}
+
+.blog-single-post-listing .thumbnail,
+.testimonial-section-two {
+  overflow: hidden;
+}
+
+.blog-single-post-listing .thumbnail img {
+  transition: .6s;
+  width: 100%;
+}
+
+.blog-single-post-listing .blog-listing-content {
+  padding: 80px 155px;
+  background: #fff;
+  border-radius: 0 15px 15px;
+  margin-top: -100px;
+  z-index: 1;
+  width: 96%;
+  left: 2%;
+  position: relative;
+  box-shadow: 0 0 0.25rem rgb(108 118 134 / 34%);
+}
+
+.blog-single-post-listing .blog-listing-content .user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info-holder {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: round #5bdc23;
+  padding: 40px 50px;
+  border-radius: 0 20px 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.blog-single-post-listing .blog-listing-content .user-info .single {
+  margin-right: 30px;
+  min-width: max-content;
+}
+
+.blog-single-post-listing .blog-listing-content .user-info .single i {
+  margin-right: 10px;
+  color: #008743;
+}
+
+.contact-info-holder .right .contact-button a,
+.contact-info-holder-img .right .contact-button a {
+  background: #008743;
+  border-radius: 5px;
+  line-height: 60px;
+  transition: .2s linear 0.1s;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.contact-info-holder .right .contact-button a {
+  padding: 0 55px;
+  color: #fff;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-single-post-listing .blog-listing-content {
+    padding: 25px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .blog-single-post-listing .blog-listing-content {
+    margin-top: -48px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-info-holder .left h2 {
+    font-size: 31px;
+    line-height: 25px;
+    margin-bottom: 22px;
+  }
+}
+
+.contact-info-holder .left h2 {
+  color: #fff;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.contact-info-holder .left,
+.contact-info-holder .right .contact-button,
+.how-work-section-shape .contact-info-holder .right .contact-button {
+  position: relative;
+  display: block;
+}
+
+.contact-info-holder:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: 0 0;
+}
+
+@media (max-width: 500px) {
+  .contact-info-holder {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "stichoza/google-translate-php": "^5.1",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
