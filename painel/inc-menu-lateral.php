@@ -64,18 +64,45 @@
             </li>
           </ul>
         </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-            <i data-feather="file-text" class="feather-icon"></i>
-            <span class="hide-menu">Depoimentos</span>
-          </a>
-          <ul aria-expanded="false" class="collapse first-level base-level-line">
-            <li class="sidebar-item"><a href="faqs.php" class="sidebar-link"><span class="hide-menu">
-                  Listar Depoimentos</span></a></li>
-            <li class="sidebar-item"><a href="add-faqs.php" class="sidebar-link"><span class="hide-menu">
-                  Adicionar Depoimentos</span></a></li>
-          </ul>
-        </li>
+         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                        aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                            class="hide-menu">FAQ </span></a>
+                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                        <li class="sidebar-item"><a href="faqs.php" class="sidebar-link"><span
+                                    class="hide-menu"> Listar Faq
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="add-faq.php" class="sidebar-link"><span
+                                    class="hide-menu"> Adicionar Faq
+                                </span></a>
+                        </li>
+                    </ul>
+                </li>
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i>
+                 <span class="hide-menu">Testemunhos</span></a>
+                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                        <li class="sidebar-item"><a href="testemunhos.php" class="sidebar-link"><span
+                                    class="hide-menu"> Listar Testemunhos
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="add-testemunho.php" class="sidebar-link"><span
+                                    class="hide-menu"> Adicionar Testemunho
+                                </span></a>
+                        </li>
+                    </ul>
+                </li>
+        <!--<li class="sidebar-item">-->
+        <!--  <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">-->
+        <!--    <i data-feather="file-text" class="feather-icon"></i>-->
+        <!--    <span class="hide-menu">Depoimentos</span>-->
+        <!--  </a>-->
+        <!--  <ul aria-expanded="false" class="collapse first-level base-level-line">-->
+        <!--    <li class="sidebar-item"><a href="faqs.php" class="sidebar-link"><span class="hide-menu">-->
+        <!--          Listar Depoimentos</span></a></li>-->
+        <!--    <li class="sidebar-item"><a href="add-faqs.php" class="sidebar-link"><span class="hide-menu">-->
+        <!--          Adicionar Depoimentos</span></a></li>-->
+        <!--  </ul>-->
+        <!--</li>-->
         <li class="sidebar-item"> <a class="sidebar-link" href="editar-sucesso.php?pi=S&id=1">
             <i data-feather="file-text" class="feather-icon"></i>Sucesso</a>
         </li>

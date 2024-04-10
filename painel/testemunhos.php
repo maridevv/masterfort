@@ -1,8 +1,6 @@
 <?php include "verifica.php";
-$puxaFaqs = $faqs->rsDados();
-$faqs->excluir();
-
-
+$puxaTestemunhos = $testemunhos->rsDados();
+$testemunhos->excluir();
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="pt-br">
@@ -14,7 +12,7 @@ $faqs->excluir();
     <meta name="description" content="">
     <meta name="author" content="Adriano Monteiro">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/hoogli_logo.svg">
-    <title>Painel Hoogli - FAQ</title>
+    <title>Painel Hoogli - Testemunhos</title>
     <link href="dist/css/style.min.css" rel="stylesheet">
 </head>
 
@@ -32,7 +30,7 @@ $faqs->excluir();
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">FAQ</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Testemunhos</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
@@ -42,7 +40,7 @@ $faqs->excluir();
                         </div>
                     </div>
                     <div class="col-5 align-self-center">
-                        <a href="add-faq.php" class="btn btn-success float-right">Add. Faq</a>
+                        <a href="add-testemunho.php" class="btn btn-success float-right">Add. Testemunho</a>
                     </div>
                 </div>
             </div>
@@ -53,32 +51,32 @@ $faqs->excluir();
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table id="zero_config" class="table table-striped table-bordered no-wrap">
-                                       
                                         <thead>
                                             <tr>
-                                                <th>Título</th>
-                                                 <!--<th>Página</th>-->
+                                                <th>Nome</th>
+                                                <th>Testemunho</th>
                                                 <th>Opções</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php 
-                                            if(count($puxaFaqs) > 0){
-                                            foreach($puxaFaqs as $faq){?>
+                                            if(count($puxaTestemunhos) > 0){
+                                            foreach($puxaTestemunhos as $testemunho){?>
                                             <tr>
-                                                <td><?php echo $faq->titulo;?></td>
-                                                <!--<td><?php echo $faq->pag;?></td>-->
+                                                
+                                                <td><?php echo $testemunho->nome;?></td>
+                                                <td><?php echo $testemunho->testemunho;?></td>
                                                 <td>
-                                                    <a href="editar-faq.php?id=<?php echo $faq->id;?>" class="btn btn-success btn-circle"><i class="fas fa-pencil-alt"></i></a>
-                                                    <a href="faqs.php?id=<?php echo $faq->id;?>&acao=excluirFaq" class="btn btn-warning btn-circle"><i class="fa fa-times"></i></a>
+                                                    <a href="editar-testemunho.php?id=<?php echo $testemunho->id;?>" class="btn btn-success btn-circle"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="testemunhos.php?id=<?php echo $testemunho->id;?>&acao=excluirTestemunho" class="btn btn-warning btn-circle"><i class="fa fa-times"></i></a>
                                                 </td>
                                             </tr>
                                             <?php } }?>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Título</th>
-                                                <!--<th>Página</th>-->
+                                                <th>Nome</th>
+                                                <th>Testemunho</th>
                                                 <th>Opções</th>
                                             </tr>
                                         </tfoot>

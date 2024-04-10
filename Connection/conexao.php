@@ -1,7 +1,7 @@
 <?php
 $hostname_conexao = "localhost";
-$database_conexao = "hooglidev_masterfort";
-$username_conexao = "hooglidev_hoogli2" ;
+$database_conexao = "masterforttelhas_site";
+$username_conexao = "masterforttelhas_hoogli" ;
 $password_conexao = 'Hoogli@2002';
 global $conn;
 

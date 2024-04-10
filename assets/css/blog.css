@@ -6,7 +6,7 @@
 .blog-single-post-listing.details .thumbnail {
   position: relative;
   border-radius: 15px 15px 15px 0;
-  box-shadow: 0 30px 504px #70e01f1a;
+  box-shadow: 0 30px 504px #0b1d3605;
 }
 
 .blog-single-post-listing .thumbnail,
@@ -44,7 +44,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background: round #5bdc23;
+  background:#00276a;
   padding: 40px 50px;
   border-radius: 0 20px 20px;
   margin-top: 20px;
@@ -58,12 +58,12 @@
 
 .blog-single-post-listing .blog-listing-content .user-info .single i {
   margin-right: 10px;
-  color: #008743;
+  color: #00276a;
 }
 
 .contact-info-holder .right .contact-button a,
 .contact-info-holder-img .right .contact-button a {
-  background: #008743;
+  background: #02d14d;
   border-radius: 5px;
   line-height: 60px;
   transition: .2s linear 0.1s;

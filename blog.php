@@ -91,7 +91,7 @@ $puxaBlogs = $Blogs->rsDados('', 'id DESC');
                                     </h2>
                                     <div class="date-box">
                                         <span>
-                                            <?php echo $blogSingle->data_postagem ?>
+                                           <?php echo formataData($blogSingle->data_postagem);?>
                                         </span>
                                     </div>
                                 </div>

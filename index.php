@@ -3,10 +3,6 @@ include "Class/home.class.php";
 $puxaHome = Home::getInstance(Conexao::getInstance());
 $home = $puxaHome->rsDados(1);
 
-include "Class/faqs.class.php";
-$puxaFaqs = Faqs::getInstance(Conexao::getInstance());
-$faqs = $puxaFaqs->rsDados();
-
 include "Class/blogs.class.php";
 $Blogs = Blogs::getInstance(Conexao::getInstance());
 $puxaBlogs = $Blogs->rsDados('', 'id DESC');
@@ -14,6 +10,14 @@ $puxaBlogs = $Blogs->rsDados('', 'id DESC');
 include "Class/produto.class.php";
 $puxaProduto = Produto::getInstance(Conexao::getInstance());
 $produto = $puxaProduto->rsDados();
+
+include "Class/faqs.class.php";
+$puxaFaqs = Faqs::getInstance(Conexao::getInstance());
+$faqs = $puxaFaqs->rsDados();
+
+include "Class/testemunhos.class.php";
+$puxaTestemunhos = Testemunhos::getInstance(Conexao::getInstance());
+$testemunhos = $puxaTestemunhos->rsDados();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -131,11 +135,11 @@ $produto = $puxaProduto->rsDados();
                         <?php } ?>
                     </div>
                     <div class="swiper_button_home">
-                        <div class="swiper-button-prev swiper-button-white button_home_prev1 "></div>
-                        <div class="swiper-button-next swiper-button-white button_home_next1"></div>
+                        <div class="swiper-button-prev swiper-button-white button_home_prev1 "><i class="fa fa-chevron-left"></i></div>
+                        <div class="swiper-button-next swiper-button-white button_home_next1"><i class="fa fa-chevron-right"></i></div>
                     </div>
 
-                    <div class="swiper-pagination"></div>
+                    
                 </div>
             </div>
         </section>
@@ -153,11 +157,9 @@ $produto = $puxaProduto->rsDados();
                     </p>
                 </div>
                 <div class="home_three_content">
-                    <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_3_img_13 ?>"
-                        alt="<?php echo $home->section_3_image_alt_13 ?>" class="w-100">
+                    <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_3_img_13 ?>" alt="<?php echo $home->section_3_image_alt_13 ?>" class="w-100">
                     <div class="shapes">
-                        <div class="feature-note right top wow fadeInRight show-cont first shape_one"
-                            style="visibility: visible; animation-name: fadeInRight;">
+                        <div class="feature-note right top wow fadeInRight show-cont first shape_one" style="visibility: visible; animation-name: fadeInRight;">
                             <div class="indicator">
                                 <div class="plus-icon">
                                     <span class="plus">+</span>
@@ -167,8 +169,7 @@ $produto = $puxaProduto->rsDados();
                                 <?php echo $home->section_3_conteudo_14 ?>
                             </div>
                         </div>
-                        <div class="feature-note left bottom wow fadeInLeft show-cont second shape_two"
-                            style="visibility: visible; animation-name: fadeInLeft;">
+                        <div class="feature-note left bottom wow fadeInLeft show-cont second shape_two" style="visibility: visible; animation-name: fadeInLeft;">
                             <div class="indicator">
                                 <div class="plus-icon">
                                     <span class="plus">+</span>
@@ -178,8 +179,7 @@ $produto = $puxaProduto->rsDados();
                                 <?php echo $home->section_3_conteudo_15 ?>
                             </div>
                         </div>
-                        <div class="feature-note left bottom wow featuretwo fadeInRight show-cont shape_three"
-                            style="visibility: visible; animation-name: fadeInRight;">
+                        <div class="feature-note left bottom wow featuretwo fadeInRight show-cont shape_three" style="visibility: visible; animation-name: fadeInRight;">
                             <div class="indicator">
                                 <div class="plus-icon">
                                     <span class="plus">+</span>
@@ -189,8 +189,7 @@ $produto = $puxaProduto->rsDados();
                                 <?php echo $home->section_3_conteudo_16 ?>
                             </div>
                         </div>
-                        <div class="feature-note left bottom featureOne wow fadeInLeft show-cont shape_four"
-                            style="visibility: visible; animation-name: fadeInLeft;">
+                        <div class="feature-note left bottom featureOne wow fadeInLeft show-cont shape_four" style="visibility: visible; animation-name: fadeInLeft;">
                             <div class="indicator">
                                 <div class="plus-icon">
                                     <span class="plus">+</span>
@@ -209,11 +208,8 @@ $produto = $puxaProduto->rsDados();
                 <div class="home_four_content_icons">
                     <div class="row home_four_content_icons_section">
                         <div class="col-xl-4 col-lg-4 col-md-12">
-                            <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_4_img_18 ?>"
-                                alt="<?php echo $home->section_4_image_alt_18 ?>">
-                            <p class="text-center">
-                                <?php echo $home->section_4_conteudo_19 ?>
-                            </p>
+                            <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_4_img_18 ?>" alt="<?php echo $home->section_4_image_alt_18 ?>">
+                            <p class="text-center"><?php echo $home->section_4_conteudo_19 ?></p>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-12">
                             <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_4_img_20 ?>"
@@ -303,156 +299,72 @@ $produto = $puxaProduto->rsDados();
                 </div>
                 <div class="row d-flex justify-content-center swiper_home_six position-relative">
                     <div class="swiper-wrapper">
-                        <?php foreach ($faqs as $faq) { ?>
+                        <?php foreach ($testemunhos as $testemunho) { ?>
                             <div class="swiper-slide d-flex justify-content-center">
                                 <div class="home_seven_item ">
-                                    <img src="<?php echo SITE_URL; ?>/img/<?php echo $faq->section_1_img_1 ?>"
-                                        alt="<?php echo $faq->section_1_image_alt_1 ?>" class="home_seven_first_img">
-                                    <h3>
-                                        <?php echo $faq->section_1_conteudo_2 ?>
-                                    </h3>
-                                    <img src="<?php echo SITE_URL; ?>/img/<?php echo $faq->section_1_img_3 ?>"
-                                        alt="<?php echo $faq->section_1_image_alt_3 ?>" class="home_seven_second_img">
-                                    <p>
-                                        <?php echo $faq->section_1_textarea_4 ?>
-                                    </p>
+                                   <i class="fa fa-quote-left"></i>
+                                    <h3><?php echo $testemunho->nome?></h3>
+                                   <div class="stars">
+                                       <i class="fa fa-star"></i>
+                                       <i class="fa fa-star"></i>
+                                       <i class="fa fa-star"></i>
+                                       <i class="fa fa-star"></i>
+                                       <i class="fa fa-star"></i>
+                                   </div>
+                                    <p><?php echo $testemunho->testemunho?></p>
                                 </div>
                             </div>
                         <?php } ?>
                     </div>
-                    <div class="swiper-button-prev swiper-button-white button_home_prev2"></div>
-                    <div class="swiper-button-next swiper-button-white button_home_next2"></div>
+                    <div class="swiper-button-prev swiper-button-white button_home_prev2"><i class="fa fa-chevron-left"></i></div>
+                    <div class="swiper-button-next swiper-button-white button_home_next2"><i class="fa fa-chevron-right"></i></div>
                 </div>
             </div>
         </section>
-        <section class="faq-one home_eight"
-            style="background-image: url(<?php echo SITE_URL; ?>/img/<?php echo $home->section_8_img_33 ?>);">
+        <section class="faq-one home_eight" style="background-image: url(<?php echo SITE_URL; ?>/img/<?php echo $home->section_8_img_33 ?>);">
             <div class="faq-one__shape"></div>
             <div class="container">
                 <div class="home_eight_title">
-                    <h3>
-                        <?php echo $home->section_8_conteudo_34 ?>
-                    </h3>
+                    <h3><?php echo $home->section_8_conteudo_34 ?></h3>
                 </div>
-                <div class="row">
+                <div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion">
+                    <div class="row">
 
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="faq-one__accordions">
-                            <div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion">
-                                <div class="accrodion wow fadeInUp animated active" data-wow-delay="0ms"
-                                    data-wow-duration="1000ms"
-                                    style="visibility: visible; animation-duration: 1000ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                                    <div class="accrodion-title">
-                                        <h4>
-                                            <?php echo $home->section_8_conteudo_35 ?>
-                                        </h4>
-                                    </div>
-                                    <div class="accrodion-content" style="">
-                                        <div class="inner">
-                                            <p>
-                                                <?php echo $home->section_8_conteudo_37 ?>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accrodion wow fadeInUp animated" data-wow-delay="100ms"
-                                    data-wow-duration="1000ms"
-                                    style="visibility: visible; animation-duration: 1000ms; animation-delay: 100ms; animation-name: fadeInUp;">
-                                    <div class="accrodion-title">
-                                        <h4>
-                                            <?php echo $home->section_8_conteudo_39 ?>
-                                        </h4>
-                                    </div>
-                                    <div class="accrodion-content" style="display: none;">
-                                        <div class="inner">
-                                            <p>
-                                                <?php echo $home->section_8_conteudo_41 ?>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accrodion wow fadeInUp animated" data-wow-delay="100ms"
-                                    data-wow-duration="1000ms"
-                                    style="visibility: visible; animation-duration: 1000ms; animation-delay: 100ms; animation-name: fadeInUp;">
-                                    <div class="accrodion-title">
-                                        <h4>
-                                            <?php echo $home->section_8_conteudo_43 ?>
-                                        </h4>
-                                    </div>
-                                    <div class="accrodion-content" style="display: none;">
-                                        <div class="inner">
-                                            <p>
-                                                <?php echo $home->section_8_conteudo_45 ?>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       <?php
+                        $totalFaqs = count($faqs);
+                        $faqsPerColumn = ceil($totalFaqs / 2);
+                        
+                        for ($columnIndex = 0; $columnIndex < 2; $columnIndex++) {
+                            echo '<div class="col-lg-6"><div class="faq-one__accordions"><div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion">';
+                            
+                            for ($i = $columnIndex * $faqsPerColumn; $i < ($columnIndex + 1) * $faqsPerColumn && $i < $totalFaqs; $i++) {
+                                $faq = $faqs[$i];
+                                $activeClass = ($i === 0) ? 'active' : '';
+                                $iconClass = ($activeClass === 'active') ? 'fa fa-minus' : 'fa fa-plus';
+                        
+                                echo '<div class="accrodion wow fadeInUp animated ' . $activeClass . '" data-wow-delay="0ms" data-wow-duration="1000ms">';
+                                echo '<div class="accrodion-title">';
+                                echo '<h4>' . $faq->titulo . '<i class="' . $iconClass . '"></i></h4>';
+                                echo '</div>';
+                                echo '<div class="accrodion-content">';
+                                echo '<div class="inner">';
+                                echo '<p>' . $faq->descricao . '</p>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</div>';
+                            }
+                        
+                            echo '</div></div></div>';
+                        }
+                        ?>
+
+
                     </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="faq-one__accordions">
-                            <div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion">
-                                <div class="accrodion wow fadeInUp animated" data-wow-delay="200ms"
-                                    data-wow-duration="1000ms"
-                                    style="visibility: visible; animation-duration: 1000ms; animation-delay: 200ms; animation-name: fadeInUp;">
-                                    <div class="accrodion-title">
-                                        <h4>
-                                            <?php echo $home->section_8_conteudo_47 ?>
-                                        </h4>
-                                    </div>
-                                    <div class="accrodion-content" style="display: none;">
-                                        <div class="inner">
-                                            <p>
-                                                <?php echo $home->section_8_conteudo_49 ?>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accrodion wow fadeInUp animated" data-wow-delay="300ms"
-                                    data-wow-duration="1000ms"
-                                    style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInUp;">
-                                    <div class="accrodion-title">
-                                        <h4>
-                                            <?php echo $home->section_8_conteudo_51 ?>
-                                        </h4>
-                                    </div>
-                                    <div class="accrodion-content" style="display: none;">
-                                        <div class="inner">
-                                            <p>
-                                                <?php echo $home->section_8_conteudo_53 ?>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accrodion wow fadeInUp animated" data-wow-delay="300ms"
-                                    data-wow-duration="1000ms"
-                                    style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInUp;">
-                                    <div class="accrodion-title">
-                                        <h4>
-                                            <?php echo $home->section_8_conteudo_55 ?>
-                                        </h4>
-                                    </div>
-                                    <div class="accrodion-content" style="display: none;">
-                                        <div class="inner">
-                                            <p>
-                                                <?php echo $home->section_8_conteudo_57 ?>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  
                     <div class="home_eight_cta">
-                        <p>
-                            <?php echo $home->section_8_conteudo_59 ?>
-                        </p>
+                        <p><?php echo $home->section_8_conteudo_59 ?></p>
                         <div class="home_eight_cta_link">
-                            <a href="<?php echo $home->section_8_link_conteudo_60 ?>"
-                                aria-label="<?php echo $home->section_8_link_alt_60 ?>">
+                            <a href="<?php echo $home->section_8_link_conteudo_60 ?>" aria-label="<?php echo $home->section_8_link_alt_60 ?>">
                                 <?php echo $home->section_8_link_60 ?>
                             </a>
                         </div>
@@ -490,7 +402,7 @@ $produto = $puxaProduto->rsDados();
                                             <?php echo $puxaBlogs[0]->titulo ?>
                                         </p>
                                         <span>
-                                            <?php echo $puxaBlogs[0]->data_postagem ?>
+                                            <?php echo formataData($puxaBlogs[0]->data_postagem);?>
                                         </span>
                                     </div>
                                 </a>
@@ -504,7 +416,7 @@ $produto = $puxaProduto->rsDados();
                                                 <?php echo $puxaBlogs[1]->titulo ?>
                                             </p>
                                             <span>
-                                                <?php echo $puxaBlogs[1]->data_postagem ?>
+                                                <?php echo formataData($puxaBlogs[1]->data_postagem);?>
                                             </span>
                                         </div>
                                     </a>
@@ -516,30 +428,19 @@ $produto = $puxaProduto->rsDados();
                 </div>
             </div>
         </section>
-        <section class="home_ten"
-            style="background-image: url(<?php echo SITE_URL; ?>/img/<?php echo $home->section_10_img_65 ?>);">
+        <section class="home_ten" style="background-image: url(<?php echo SITE_URL; ?>/img/<?php echo $home->section_10_img_65 ?>);">
             <div class="container h-100">
                 <div class="home_ten_content">
                     <div class="home_ten_content_itens">
-                        <h4>
-                            <?php echo $home->section_10_conteudo_66 ?>
-                        </h4>
-                        <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_10_img_67 ?>"
-                            alt="<?php echo $home->section_10_image_alt_67 ?>">
+                        <h4><?php echo $home->section_10_conteudo_66 ?></h4>
+                        <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_10_img_67 ?>" alt="<?php echo $home->section_10_image_alt_67 ?>">
                         <p>
                             <?php echo $infoSistema->endereco; ?>
                         </p>
-                        <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_10_img_69 ?>"
-                            alt="<?php echo $home->section_10_image_alt_69 ?>">
-                        <a href="tel:<?php echo $infoSistema->telefone1; ?>">
-                                               <p> <?php echo $infoSistema->telefone1; ?></p>
-                                            </a>
-                        <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_10_img_71 ?>"
-                            alt="<?php echo $home->section_10_image_alt_71 ?>">
-                        <a href="mailto:<?php echo $infoSistema->email1 ?>"
-                                                aria-label="Link de encaminhamento para o E-mail da <?php echo $infoSistema->nome_empresa ?>">
-                                                <p><?php echo $infoSistema->email1 ?></p>
-                                            </a>
+                        <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_10_img_69 ?>" alt="<?php echo $home->section_10_image_alt_69 ?>">
+                        <a href="tel:<?php echo $infoSistema->telefone1; ?>"> <p> <?php echo $infoSistema->telefone1; ?></p>  </a>
+                        <img src="<?php echo SITE_URL; ?>/img/<?php echo $home->section_10_img_71 ?>" alt="<?php echo $home->section_10_image_alt_71 ?>">
+                        <a href="mailto:<?php echo $infoSistema->email1 ?>" aria-label="Contato via E-mail da <?php echo $infoSistema->nome_empresa ?>"> <p>Contato via E-mail</p> </a>
                     </div>
                 </div>
             </div>

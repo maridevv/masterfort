@@ -150,10 +150,7 @@ $contato = $puxaContato->rsDados(1);
                   <div class="d-flex align-items-center products_three_item">
                     <img src="<?php echo SITE_URL; ?>/img/<?php echo $contato->section_2_img_6 ?>"
                       alt="<?php echo $contato->section_2_image_alt_6 ?>">
-                    <a href="mailto:<?php echo $infoSistema->email1 ?>"
-                                                aria-label="Link de encaminhamento para o E-mail da <?php echo $infoSistema->nome_empresa ?>">
-                                                <p><?php echo $infoSistema->email1 ?></p>
-                                            </a>
+                    <a href="mailto:<?php echo $infoSistema->email1 ?>" aria-label="Contato via E-mail da <?php echo $infoSistema->nome_empresa ?>"> <p>Contato via E-mail</p> </a>
                   </div>
                   <div class="d-flex align-items-center products_three_item">
                     <img src="<?php echo SITE_URL; ?>/img/<?php echo $contato->section_2_img_7 ?>"

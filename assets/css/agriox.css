@@ -3994,7 +3994,7 @@ button {
   line-height: normal;
   letter-spacing: 0.26px;
   text-align: left;
-  color: #b0b0b0;
+  color: #797979;
 }
 
 .blog-one__single-img .date-box span {
@@ -5812,16 +5812,24 @@ button {
   border-bottom: 1px solid white;
   /* min-height: 120px; */
 }
-
+.accrodion-title i{
+    position: fixed;
+    color: #fff;
+    top: 3px;
+    right: 8px;
+    z-index: 33;
+    font-size: 18px;
+}
 /* .faq-one__accordions .accrodion.active .accrodion-title {
   background: #ffffff;
 } */
 
 .faq-one__accordions .accrodion .accrodion-title h4 {
   position: relative;
-  color: white;
-  font-size: 20px;
+  color: #fff;
+  font-size: 19px;
   line-height: 30px;
+  width:85%;
   font-weight: 700;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
@@ -5831,36 +5839,36 @@ button {
 }
 
 .faq-one__accordions .accrodion.active .accrodion-title h4 {
-  color: white;
+  color: #fff;
 }
 
-.faq-one__accordions .accrodion .accrodion-title h4::before {
-  content: "+";
-  font-family: 'icomoon' !important;
-  font-weight: 900;
-  font-size: 20px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  text-align: center;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-  margin-right: 10px;
-}
+/*.faq-one__accordions .accrodion .accrodion-title h4::before {*/
+/*  content: "+";*/
+/*  font-family: 'icomoon' !important;*/
+/*  font-weight: 900;*/
+/*  font-size: 20px;*/
+/*  color: white;*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  right: 0;*/
+/*  text-align: center;*/
+/*  -webkit-transform: translateY(-50%);*/
+/*  transform: translateY(-50%);*/
+/*  -webkit-transition: all 500ms ease;*/
+/*  transition: all 500ms ease;*/
+/*  margin-right: 10px;*/
+/*}*/
 
-.faq-one__accordions .accrodion.active .accrodion-title h4::before {
-  content: "\e937";
-  font-family: 'icomoon' !important;
-  color: white;
-}
+/*.faq-one__accordions .accrodion.active .accrodion-title h4::before {*/
+/*  content: "\e937";*/
+/*  font-family: 'icomoon' !important;*/
+/*  color: white;*/
+/*}*/
 
 .faq-one__accordions .accrodion .accrodion-content {
   position: relative;
   display: block;
-  padding: 0px 35px 27px;
+  padding: 0px 15px 27px;
 }
 
 .faq-one__accordions .accrodion .accrodion-content .inner {
@@ -5870,7 +5878,8 @@ button {
 
 .faq-one__accordions .accrodion .accrodion-content .inner p {
   font-size: 16px;
-  color: white;
+  color: #fff;
+  margin-top:20px;
 }
 
 .faq-one__accordions.faq-one__accordions--services-details {
@@ -11191,14 +11200,14 @@ Sidebar
 }
 
 .video-two span {
-  font-size: 14.5px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.14;
-  letter-spacing: normal;
-  text-align: right;
-  color: #666;
+    font-size: 18.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    text-align: right;
+    color: #666;
 }
 
 .video-two__title {
@@ -13781,7 +13790,7 @@ body.boxed-wrapper {
   line-height: 1.38;
   letter-spacing: normal;
   text-align: left;
-  color: rgba(129, 129, 129, 0.7);
+  color: rgb(59 59 59 / 70%);
 }
 
 .about_four_carousel {
@@ -13849,6 +13858,12 @@ body.boxed-wrapper {
 .home_one_absolute img{
     height:100%;
 }
+
+@media(max-width:1280px) and (min-width:800px){
+    .home_one_absolute img{
+        height: 74%;
+    }
+}
 .home_col {
   display: flex;
   flex-direction: column;
@@ -13862,7 +13877,7 @@ body.boxed-wrapper {
   font-style: normal;
   line-height: normal;
   letter-spacing: 2.5px;
-  font-size: 10px;
+  font-size: 17px;
   text-align: left;
   color: #fff;
   display: flex;
@@ -13882,7 +13897,7 @@ body.boxed-wrapper {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 0.9;
+  line-height: 50px;
   letter-spacing: normal;
   text-align: left;
   color: #f2f2f2;
@@ -13914,7 +13929,9 @@ body.boxed-wrapper {
   text-align: center;
   color: #fff;
 }
-
+.home_one_link a:hover {
+    color: #66d383;
+}
 .home_two {
   width: 100%;
   background: linear-gradient(to bottom, #e8e8e8, #fff);
@@ -14012,7 +14029,9 @@ body.boxed-wrapper {
 .home_two .slider_text {
   text-align: center;
 }
-
+.home_two .slider_text span{
+        line-height: 10px;
+}
 .home_two .swiper-button-next {
   color: red;
 }
@@ -14084,10 +14103,7 @@ body.boxed-wrapper {
 
 .slider_text span {
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.31;
-  letter-spacing: normal;
+  font-size: 15px;
   text-align: center;
   color: #002766;
 }
@@ -14126,7 +14142,11 @@ body.boxed-wrapper {
   text-align: center;
   color: #002766;
 }
-
+@media(max-width:500px){
+    .home_three .home_three_title p{
+        font-size: 14px;
+    }
+}
 .home_three_content {
   position: relative;
   margin: 8rem 0 3rem;
@@ -14218,7 +14238,7 @@ body.boxed-wrapper {
 
 .feature-note .indicator .plus-icon .plus {
   background: #65d383;
-  color: #fff;
+  color: #65d383;
 }
 
 .feature-note .indicator .plus-icon .plus {
@@ -14228,7 +14248,7 @@ body.boxed-wrapper {
   align-items: center;
   justify-content: center;
   line-height: 31px;
-  cursor: pointer;
+  cursor: default;
   position: relative;
   z-index: 2;
   transition: all 300ms linear 0s;
@@ -14481,9 +14501,16 @@ body.boxed-wrapper {
 
 .home_five {
   background-color: white;
-  padding: 13rem 0 9rem;
+  padding: 13rem 0 6rem;
 }
-
+.stars{
+    color: #fbc200;
+    margin-bottom:10px;
+}
+.home_seven_item .fa-quote-left{
+    color: #669f74;
+    font-size:25px;
+}
 .home_five .content span {
   padding: 3px 14.5px 4.5px 12.5px;
   border: solid 1px #002665;
@@ -14553,7 +14580,7 @@ body.boxed-wrapper {
 }
 
 .home_six_text h3 {
-  font-size: 27px;
+  font-size: 39px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -14586,7 +14613,9 @@ body.boxed-wrapper {
   color: #fff;
 }
 
-
+.home_six_link a:hover{
+    color:#85d08c;
+}
 .z-1 {
   position: relative;
   z-index: 1;
@@ -14663,8 +14692,42 @@ body.boxed-wrapper {
   padding: 30px;
   transform: scale(.9);
 }
+.button_home_prev2 i{
+    font-size: 30px; 
+    color: #fff;
+    top:-14px;
+    right: 10px;
+    position:relative;
+}
+.button_home_next2 i{
+    font-size: 30px;
+    color: #fff;
+    top: -14px;
+    position: relative;
+    left: -6px;
+}
+.button_home_prev1 i{
+    font-size: 30px;
+    color: #fff;
+    top: -14px;
+    right: 10px;
+    position: relative;
+}
 
-
+.button_home_next1 i{
+    font-size: 30px;
+    color: #fff;
+    top: -14px;
+    position: relative;
+    left: -6px;
+}
+.button_home_prev2 i{
+    font-size: 30px;
+    color: #fff;
+    top: -14px;
+    right: 10px;
+    position: relative;
+}
 .home_eight {
   min-height: 828px;
   background-size: cover;
@@ -14806,14 +14869,14 @@ body.boxed-wrapper {
 }
 
 .itens_content span {
-  font-size: 10px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 0.26px;
-  text-align: left;
-  color: #b0b0b0;
+font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.26px;
+    text-align: left;
+    color: #737373;
 }
 
 .home_ten {
@@ -15036,6 +15099,9 @@ body.boxed-wrapper {
         margin-bottom: 4rem;
     }
 }
+.home_five img{
+    border-radius:25px;
+}
 @media only screen and (max-width: 600px) {
     .home_two .swiper-slide-next{
         visibility: hidden;
@@ -15060,6 +15126,7 @@ body.boxed-wrapper {
     }
     .home_one h1 {
         font-size: 30px;
+        line-height:35px;
     }
     .home_ten_content_itens {
         width: 100%;
@@ -15079,17 +15146,21 @@ body.boxed-wrapper {
     }
     .feature-note.right.top {
         bottom: 44px;
-        left: 190px;
+        left: 180px;
         width: 100%;
     }
     .featuretwo {
-        bottom: 187px;
-        right: 54px;
+        bottom: 220px;
+        right: 0px;
     }
     .second{
-         rotate: 180deg;
-        top: 137px;
-        left: -40px;
+        rotate: 180deg;
+        top: 130px;
+        left: -130px;
+    }
+    .featureOne.shape_four {
+        top: -145px;
+        right: 165px;
     }
     .second .feature-name{
         rotate: 180deg;
